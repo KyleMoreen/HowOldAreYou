@@ -4,7 +4,11 @@ const birthYear = document.getElementById('birth-year');
 const showAge = document.getElementById('show-age');
 
 const d = new Date();
+const currentMonth = d.getMonth() + 1;
+const currentDay = d.getDate();
 const currentYear = d.getFullYear();
+
+console.log(currentMonth);
 
 const maxMonth = 12;
 const maxDay = 31;
@@ -35,6 +39,23 @@ for (i = 0; i < maxYear; i++) {
 }
 
 function ageCalc() {
-    const age = currentYear - birthYear.value;
+    let age;
+
+    if (birthMonth.value < currentMonth) {
+        age = currentYear - birthYear.value;
+    }
+    else if (birthMonth.value == currentMonth) {
+
+        if (birthDay.value <= currentDay) {
+            age = currentYear - birthYear.value;
+        }
+        else {
+            age = currentYear - birthYear.value - 1;
+        }
+    }
+    else {
+        age = currentYear - birthYear.value - 1;
+    }
+
     showAge.innerText = `You are ${age} years old.`;
 }

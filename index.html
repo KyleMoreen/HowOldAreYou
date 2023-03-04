@@ -9,12 +9,21 @@
         <header>How Old Are You?</header>
         <div>Please enter your birth date.</div>
         <div class="birth-date" id="birth-date">
-            <select class="birth-month" id="birth-month"></select>
-            <select class="birth-day" id="birth-day"></select>
-            <select class="birth-year" id="birth-year"></select>
+            <label for="birth-month">Month:</label>
+            <select name="birth-month" class="birth-month" id="birth-month"></select>
+            <label for="birth-day">Day:</label>
+            <select name="birth-day" class="birth-day" id="birth-day"></select>
+            <label for="birth-year">Year:</label>
+            <select name="birth-year" class="birth-year" id="birth-year"></select>
         </div>
         <button class="get-age" id="get-age" onClick="ageCalc()">Get Age</button>
         <div class="show-age" id="show-age"></div>
+        <footer>
+            Like what you see? Check out my 
+                <a href="https://kylemoreen.github.io/DevPortfolio/">portfolio</a>
+            to see more projects like this!<br>
+            © 2023 Kyle Moreen
+        </footer>
         <script src="script.js"></script>
     </body>
 </html>
